@@ -31,7 +31,7 @@ task TRUST4_pe_hg38{
     Int memory
     Int disk
   }
-  
+
   command {
     /home/TRUST4/run-trust4 -b ${bam} \
       -f /home/TRUST4/hg38_bcrtcr.fa --ref /home/TRUST4/human_IMGT+C.fa \
@@ -53,4 +53,10 @@ task TRUST4_pe_hg38{
     File toassemble_fq1="${samplename}_toassemble_1.fq"
     File toassemble_fq2="${samplename}_toassemble_2.fq"
   }
+
+  meta {
+    author: "Wenhui Li"
+    email: "jemimalwh@gmail.com"
+    description: "## TRUST4 for bam input hg38 \n TRUST4 from X. Shirley Liu's Lab."
+}
 }
