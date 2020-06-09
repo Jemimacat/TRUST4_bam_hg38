@@ -46,7 +46,7 @@ workflow TRUST4workflow {
 
     output {
         File out_cdr3 = TRUST4bamhg38.out_cdr3
-        File turst4final = TRUST4bamhg38.turst4final
+        File trust4final = TRUST4bamhg38.trust4final
         File trust4report = TRUST4bamhg38.trust4report
     }
 }
