@@ -1,6 +1,6 @@
 version 1.0
 
-task TRUST4_pe_hg38 {
+task TRUST4bamhg38 {
     input {
       File bam
       String samplename
@@ -35,7 +35,7 @@ task TRUST4_pe_hg38 {
     }
 }
 
-workflow TRUST4_workflow {
+workflow TRUST4workflow {
     input {
         File bam
         String samplename
@@ -44,5 +44,5 @@ workflow TRUST4_workflow {
         Int memory
     }
 
-    call TRUST4_bam_hg38 { input: bam=bam, samplename=samplename, thread=thread, stage=stage, memory=memory }
+    call TRUST4bamhg38 { input: bam=bam, samplename=samplename, thread=thread, stage=stage, memory=memory }
 }

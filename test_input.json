@@ -3,6 +3,5 @@
 "TRUST4_workflow.samplename": "test",
 "TRUST4_workflow.thread": 1,
 "TRUST4_workflow.stage": 0,
-"TRUST4_workflow.memory": 4,
-"TRUST4_workflow.disk": 5
+"TRUST4_workflow.memory": 4
 }
