@@ -18,9 +18,9 @@ task TRUST4bamhg38 {
     }
 
     output {
-        File CDR3="${samplename}_cdr3.out"
-        File TRUST4final="${samplename}_final.out"
-        File TRUST4report="${samplename}_report.tsv"
+        File out_cdr3="${samplename}_cdr3.out"
+        File trust4final="${samplename}_final.out"
+        File trust4report="${samplename}_report.tsv"
     }
 
     runtime {
@@ -45,8 +45,8 @@ workflow TRUST4workflow {
     call TRUST4bamhg38 { input: bam=bam, samplename=samplename, thread=thread, stage=stage, memory=memory }
 
     output {
-        File out_cdr3 = TRUST4bamhg38.CDR3
-        File turst4final = TRUST4bamhg38.TRUST4final
-        File trust4report = TRUST4bamhg38.TRUST4report
+        File out_cdr3 = TRUST4bamhg38.out_cdr3
+        File turst4final = TRUST4bamhg38.turst4final
+        File trust4report = TRUST4bamhg38.trust4report
     }
 }
