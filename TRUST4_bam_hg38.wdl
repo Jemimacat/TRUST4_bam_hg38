@@ -1,12 +1,14 @@
 version 1.0
 
 workflow TRUST4_workflow {
-  File bam
-  String samplename
-  Int thread
-  Int stage
-  Int memory
-  Int disk
+  input {
+    File bam
+    String samplename
+    Int thread
+    Int stage
+    Int memory
+    Int disk
+  }
 
   call TRUST4_bam_hg38
   {input:
@@ -21,13 +23,15 @@ workflow TRUST4_workflow {
 }
 
 task TRUST4_pe_hg38{
-  File bam
-  String samplename
-  Int thread
-  Int stage
-  Int memory
-  Int disk
-
+  input {
+    File bam
+    String samplename
+    Int thread
+    Int stage
+    Int memory
+    Int disk
+  }
+  
   command {
     /home/TRUST4/run-trust4 -b ${bam} \
       -f /home/TRUST4/hg38_bcrtcr.fa --ref /home/TRUST4/human_IMGT+C.fa \
