@@ -1,3 +1,5 @@
+version 1.0
+
 workflow TRUST4_workflow {
   File bam
   String samplename
