@@ -45,8 +45,8 @@ workflow TRUST4workflow {
     call TRUST4bamhg38 { input: bam=bam, samplename=samplename, thread=thread, stage=stage, memory=memory }
 
     output {
-        File CDR3 = TRUST4bamhg38.CDR3
-        File TRUST4final = TRUST4bamhg38.TRUST4final
-        File TRUST4report = TRUST4bamhg38.TRUST4report
+        File out_cdr3 = TRUST4bamhg38.CDR3
+        File turst4final = TRUST4bamhg38.TRUST4final
+        File trust4report = TRUST4bamhg38.TRUST4report
     }
 }
